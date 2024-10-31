@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap");
-/* font-family: "Kaisei Tokumin", serif; */
-
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 /* googlefonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap");
+/* font-family: "Noto Serif Display", serif */
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap");
+/* font-family: "Kaisei Tokumin", serif; */
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap");
+/* font-family: "Imperial Script", cursive */
 
 html, body {
   margin: 0;
@@ -15,6 +18,7 @@ html, body {
 }
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 html {
@@ -27,7 +31,8 @@ html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body {
-  font-family: "Kaisei Tokumin", serif;
+  font-family: "Noto Serif Display", "Kaisei Tokumin";
+  color: white;
 }
 
 img, video {
@@ -35,6 +40,10 @@ img, video {
   height: auto;
   display: block;
   pointer-events: none;
+}
+
+span {
+  display: block;
 }
 
 /* googlefonts icons */
@@ -71,36 +80,146 @@ img, video {
   background-color: #0a9caa;
 }
 
-.FAB {
+#FAB {
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 100;
+  z-index: 50;
   margin-bottom: 1rem;
   margin-right: 1rem;
 }
-.FAB > .cosBtn {
+#FAB > .cosBtn {
   margin-left: 0.5rem;
   -webkit-filter: unset !important;
   filter: unset !important;
 }
 
-.cosMariaFrame {
-  position: relative;
+#cosMariaIntro {
+  position: absolute;
+  background-color: #3d374c;
+  background-image: url("/thebelovedmoon/cosmariainauguration/assets/matsuri_bg.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: 0 0 4px #3d374c40, 0 4px 8px #3d374c80;
+  z-index: 100;
+}
+#cosMariaIntro > #bdblur {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.cosMariaFrame > * {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.cosMariaFrame > img {
+#cosMariaIntro > #bdblur > div > img {
   width: 50rem;
-  z-index: 25;
+  padding: 2.5rem;
+  opacity: 0;
+  filter: blur(15px) drop-shadow(0 4px 8px #3d374c80);
+  transform: translateY(25px) scale(0.85);
+}
+#cosMariaIntro > #bdblur > div > span {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+#introHost,
+#meetCosMarias,
+#eventDeets {
+  width: 50rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+#introHost > *,
+#meetCosMarias > *,
+#eventDeets > * {
+  filter: drop-shadow(0 4px 8px #3d374c80);
+}
+#introHost > div > img {
+  width: 30rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+#intro1, #intro2, #intro3 {
+  opacity: 0;
+  transform: translateY(25px);
+  pointer-events: none;
+}
+
+#meetCosMarias,
+#eventDeets {
+  display: none;
+  opacity: 0;
+}
+
+.mariaRow:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.mariaCol {
+  float: left;
+  width: 50%;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+.mariaCol > img {
+  display: inline-block;
+  padding-bottom: 1rem;
+  border-radius: 50%;
+}
+@media screen and (max-width: 700px) {
+  .mariaCol {
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+  .mariaCol > img {
+    width: 25rem;
+  }
+}
+
+#maria1,
+#maria2,
+#maria3,
+#maria4,
+#maria5,
+#maria6 {
+  transition: 1s;
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+/* //////////////////////////   SUPPLEMENTAL   ////////////////////////// */
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* IMPORTANT: responsive fontsize */
+@media screen and (max-width: 540px) {
+  body { font-size: small; }
+}
+@media screen and (min-width: 540px) and (max-width: 1080px) {
+  body { font-size: normal; }
+}
+@media screen and (min-width: 1080px) and (max-width: 1620px) {
+  body { font-size: large; }
+}
+@media screen and (min-width: 1620px) and (max-width: 2160px) {
+  body { font-size: larger; }
+}
+@media screen and (min-width: 2160px) and (max-width: 2700px) {
+  body { font-size: x-large; }
+}
+@media screen and (min-width: 2700px) {
+  body { font-size: xx-large; }
 }

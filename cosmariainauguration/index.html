@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="thebelovedmoon">
-    <!-- <title>コスプレのマリア: The Grand Inauguration</title> -->
-    <title>unveils 1 Nov</title>
+    <title>コスプレのマリア: The Grand Inauguration</title>
     <link rel="icon" href="https://thebelovedmoon.github.io/assets/images/icons/maria_1_icon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="https://thebelovedmoon.github.io/assets/images/icons/maria_1_icon.png" type="image/x-icon">
     <meta name="og:type" content="website">
-    <!-- <meta name="og:title" content="コスプレのマリア: The Grand Inauguration"> -->
-    <meta name="og:title" content="unveils 1 Nov">
-    <!-- <meta name="og:image" content="https://tbmassoc.github.io/thebelovedmoon/cosmariainauguration/assets/preview.png"> -->
-    <meta name="og:image" content="https://tbmassoc.github.io/thebelovedmoon/cosmariainauguration/assets/prev_unv.png">
+    <meta name="og:title" content="コスプレのマリア: The Grand Inauguration">
+    <meta name="og:image" content="https://tbmassoc.github.io/thebelovedmoon/cosmariainauguration/assets/preview.png">
     <meta name="og:url" content="https://tbmassoc.github.io/thebelovedmoon/cosmariainauguration">
     <meta name="og:description" content="get ready to witness a cosplay introduction unlike any other!! six cosplayers, banded together for an event of a lifetime.">
     <meta name="twitter:card" content="summary_large_image">
@@ -32,22 +29,173 @@
     <script type="text/javascript">
       function pageInit() {
         // pageInit() args here
-        randomMaria();
+        intro();
       }
     </script>
     <script type="text/javascript">
       // in-page javascript
-      function randomMaria() {
-        document.getElementById("cosMaria").src = "/thebelovedmoon/cosmariainauguration/assets/cosMaria_" + randNum(1, 7) + ".png";
-      }
     </script>
   </head>
   <body onload="pageInit()">
-    <div class="FAB">
-      <span class="cosBtn material-symbols-rounded" title="more details" onclick="window.open('https://bit.ly/CosMariaIncept')">open_in_new</span>
+    <div id="cosMariaIntro"> <!-- intro screen -->
+      <div id="bdblur">
+        <div>
+          <img id="cosMariaLogo" src="/thebelovedmoon/cosmariainauguration/assets/cosmaria_logo.png" alt="">
+          <span id="startBtn" class="cosBtn material-symbols-rounded" title="click to begin" onclick="enterSite()">arrow_forward</span>
+        </div>
+      </div>
     </div>
-    <div class="cosMariaFrame">
-      <img id="cosMaria" src="" alt="">
+    <div id="FAB"> <!-- fab -->
+      <span class="cosBtn material-symbols-rounded" title="get involved (Facebook event)" onclick="window.open('https://bit.ly/CosMariaIncept')">open_in_new</span>
+    </div>
+    <div id="introHost">
+      <div id="intro1">
+        <h1 style="font-family: 'Imperial Script', cursive; font-size: 5rem;">meet your host</h1>
+        <br><br>
+      </div>
+      <div id="intro2">
+        <img src="https://thebelovedmoon.github.io/assets/images/content/firstMaria/cosplay/cosMaria/cosMaria_1_2.png" alt="">
+        <br><br>
+        <h2><i>Aga</i></h2>
+        <span><i>the incumbent First CosMaria</i></span>
+        <br>
+      </div>
+      <div id="intro3">
+        <p>
+          Aga -- colloquially known as Mother Agatha, the First Maria🍃 -- has been
+          invested into the world of cosplay since her debut on 30 Dec 2023 as part of
+          the 1st Anniversary of the Marias. from there, she has been engaging with her
+          audience and fellow cosers, on or off-conventions or streams.
+        </p>
+        <br>
+        <p>
+          her deep connections with those that she met during her times in conventions
+          has stemmed from her 'motherly' nature that she had attained as a VTuber, and
+          it still continued up to this day.
+        </p>
+        <br>
+        <p>
+          she is willing to go to great lengths to showcase the nature of cosplay and
+          hobbies beyond their intended places of interest, with only one goal in mind:
+          to allow people from all walks of life to discover their interests in their
+          own ways.
+        </p>
+        <br>
+        <span id="startBtn" class="cosBtn material-symbols-rounded" title="click to continue" onclick="meetIncumbent()">arrow_forward</span>
+      </div>
+    </div>
+    <div id="meetCosMarias">
+      <h1 style="font-family: 'Imperial Script', cursive; font-size: 5rem;">meet the CosMarias</h1>
+      <br>
+      <div class="mariaRow">
+        <div id="maria1" class="mariaCol">
+          <img src="/thebelovedmoon/cosmariainauguration/assets/cosMaria_1.png" alt="">
+          <br>
+          <h3><i>Aga</i></h3>
+          <span><i>the incumbent First CosMaria</i></span>
+          <span>as Mother Agatha, the First Maria🍃</span>
+        </div>
+        <div id="maria2" class="mariaCol">
+          <img src="/thebelovedmoon/cosmariainauguration/assets/cosMaria_2.png" alt="">
+          <br>
+          <h3><i>Dani</i></h3>
+          <span><i>the incumbent Second CosMaria</i></span>
+          <span>as Musashi (Azur Lane)</span>
+        </div>
+        <div id="maria3" class="mariaCol">
+          <img src="/thebelovedmoon/cosmariainauguration/assets/cosMaria_3.png" alt="">
+          <br>
+          <h3><i>Eri</i></h3>
+          <span><i>the incumbent Third CosMaria</i></span>
+          <span>as Albedo (Overlord)</span>
+        </div>
+        <div id="maria4" class="mariaCol">
+          <img src="/thebelovedmoon/cosmariainauguration/assets/cosMaria_4.png" alt="">
+          <br>
+          <h3><i>Shunni</i></h3>
+          <span><i>the Fourth CosMaria</i></span>
+          <span>as Baconette (Bataan Anime Convention)</span>
+        </div>
+        <div id="maria5" class="mariaCol">
+          <img src="/thebelovedmoon/cosmariainauguration/assets/cosMaria_5.png" alt="">
+          <br>
+          <h3><i>Patring</i></h3>
+          <span><i>the Fifth CosMaria</i></span>
+          <span>as Albedo (Black ver.) (Overlord)</span>
+        </div>
+        <div id="maria6" class="mariaCol">
+          <img src="/thebelovedmoon/cosmariainauguration/assets/cosMaria_6.png" alt="">
+          <br>
+          <h3><i>Shira</i></h3>
+          <span><i>the Sixth CosMaria</i></span>
+          <span>as Uta (One Piece)</span>
+        </div>
+      </div>
+      <br>
+      <span id="startBtn" class="cosBtn material-symbols-rounded" title="click to continue" onclick="eventDetails()">arrow_forward</span>
+    </div>
+    <div id="eventDeets">
+      <h1 style="font-family: 'Imperial Script', cursive; font-size: 5rem;">story</h1>
+      <br><br>
+      <p>
+        three days after VTresMarias was officially unveiled to the world, the First
+        Maria🍃 sets on her first mission: to determine which area of interest suits
+        the Collective's Core Values and aim to maintain their presence through
+        various of ways.
+      </p>
+      <br>
+      <p>
+        it just so happened that her primary interest beyond this is through a world
+        of cosplay, to which she was introduced to a few months prior.
+      </p>
+      <br>
+      <p>
+        with her unwitting determination to do something extra-special, she sets on a
+        journey and try to delve as much as she can -- which turned out to be more
+        fruitful than what needs to be. in fact, she has made friends throughout her
+        first attempt, that it had inspired her to do it over again.
+      </p>
+      <br>
+      <p>
+        many months have passed, and her desire to continue doing this venture is
+        constantly increasing; that it had earned her place in some cosplay
+        communities to which she belonged to. and all the while, she has met a number
+        of new friends along the way -- with some of them resonating the same value as
+        the Marias.
+      </p>
+      <br>
+      <p>
+        through this disposition, she has been bestowed a new mission: form a
+        Collective which aims to strengthen the Core Values, and make their hobbies
+        known to more areas.
+      </p>
+      <br>
+      <p>
+        serving her duty as the incumbent First CosMaria, her job has just begun to to
+        bear fruit..
+      </p>
+      <br><br><br><br>
+      <h1 style="font-family: 'Imperial Script', cursive; font-size: 5rem;">event details</h1>
+      <br><br>
+      <h2>event name</h2>
+      <p>コスプレのマリア: The Grand Inauguration</p>
+      <br>
+      <h2>venue</h2>
+      <p>SMX Convention Center Manila, Pasay City</p>
+      <br>
+      <h2>date</h2>
+      <p>30 Dec 2024</p>
+      <br>
+      <h2>can be viewed online?</h2>
+      <p>TBD</p>
+      <br><br>
+      <p>for more details, click the button below for the Facebook Event:</p>
+      <br>
+      <span class="cosBtn material-symbols-rounded" title="get involved (Facebook event)" onclick="window.open('https://bit.ly/CosMariaIncept')">open_in_new</span>
+      <br><br><br><br>
+      <p>start over</p>
+      <br>
+      <span class="cosBtn material-symbols-rounded" title="start over" onclick="location.reload()">refresh</span>
     </div>
   </body>
 </html>
