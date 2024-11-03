@@ -65,6 +65,7 @@ span {
 
 .cosBtn {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  margin: 0.25rem;
   padding: 1rem;
   aspect-ratio: 1 / 1;
   background-color: #3d374c;
@@ -92,6 +93,7 @@ span {
   margin-left: 0.5rem;
   -webkit-filter: unset !important;
   filter: unset !important;
+  margin: 0;
 }
 
 #cosMariaIntro {
